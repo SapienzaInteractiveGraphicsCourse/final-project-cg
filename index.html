@@ -3,40 +3,32 @@
 		<title>Project IG</title>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 		<script type="text/javascript" src="js/three.min.js"></script>
-        <script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/GLTFLoader.js"></script>
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="panel">
-			<div class="game-title">
-				<div class="title">Marathon</div>
+			<div class="game-logo">
+				<img src = 'img/logo.jpeg' style="width:210px;height:90px;">
 			</div>
 			<div class="stat">
-				<label>Score</label>
-				<p id="score">0</p>
+				Score: <label  id="score">0</label>
 			</div>
-			<table id="controls">
-			  	<tr>
-			    	<td>Up:</td>
-			    	<td>Jump</td>
-			  	</tr>
-			  	<tr>
-			    	<td>Left:</td>
-			    	<td>Left lane switch</td>
-			  	</tr>
-			  	<tr>
-			    	<td>Right:</td>
-			    	<td>Right lane switch</td>
-			  	</tr>
-			  	<tr>
-			    	<td>p:</td>
-			    	<td>Pause</td>
-			  	</tr>
-			</table>
-			<table id="ranks"></table>
+			<br></br>
+			<p>Day or Night: <button id = "night">Night</button> <button id = "day">Day</button></p>
+			<p>Gender: <button id = "male">Male</button> <button id = "female">Female</button></p>
+			<p>Select your coutry:</p>
+			<p> <button id = "it">Italy</button>
+				<button id = "en">England</button>
+				<button id = "sp">Spain</button>
+				<button id = "jm">Jamaica</button>
+			</p>
+			<br></br>
+			<img src = 'img/tasti.jpg' style="width:200px;height:150px;">
 			<div class="animate-flicker" id="variable-content">Press ENTER to start</div>
 		</div>
 		<div id="world"></div>			
 		</div>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
