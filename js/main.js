@@ -52,7 +52,7 @@ scene.add( dirlight );
 
 var t = new THREE.BoxGeometry(3000, 20, 120000);
 const mattrack = new THREE.MeshPhongMaterial({color: Colors.tartan_red});
-const textNormalTrack = new THREE.TextureLoader().load( '../img/track.jpg');
+const textNormalTrack = new THREE.TextureLoader().load( './img/track.jpg');
 textNormalTrack.wrapS = THREE.RepeatWrapping;
 textNormalTrack.wrapT = THREE.RepeatWrapping;
 textNormalTrack.repeat.set(5, 60);
@@ -63,7 +63,7 @@ scene.add(track);
 
 var g = new THREE.BoxGeometry(8000, 20, 120000);
 const matground = new THREE.MeshPhongMaterial({color: Colors.green,});
-const textNormalGround = new THREE.TextureLoader().load( '../img/ground.jpg');
+const textNormalGround = new THREE.TextureLoader().load( './img/ground.jpg');
 textNormalGround.wrapS = THREE.RepeatWrapping;
 textNormalGround.wrapT = THREE.RepeatWrapping;
 textNormalGround.repeat.set(10, 60);
@@ -82,7 +82,7 @@ scene.add(linea1);
 
 var birds;
 const loaderb = new THREE.GLTFLoader();
-loaderb.load('../assets/birds/scene.gltf', function(gltf){
+loaderb.load('./assets/birds/scene.gltf', function(gltf){
     birds = gltf.scene;
     birds.position.set(-1.5,1000.8, -2004);
     birds.scale.set(0.3, 0.3, 0.3);
@@ -97,7 +97,7 @@ loaderb.load('../assets/birds/scene.gltf', function(gltf){
 
 var simbolo;
 const loader = new THREE.GLTFLoader();
-loader.load('../assets/simbolo/scene.gltf', function(gltf){
+loader.load('./assets/simbolo/scene.gltf', function(gltf){
     simbolo = gltf.scene;
     simbolo.position.set(5, 1002, -2007);
     simbolo.scale.set(0.2, 0.2, 0.2);
@@ -112,7 +112,7 @@ loader.load('../assets/simbolo/scene.gltf', function(gltf){
 
 var stars;
 const loaders = new THREE.GLTFLoader();
-loaders.load('../assets/stars/scene.gltf', function(gltf){
+loaders.load('./assets/stars/scene.gltf', function(gltf){
     stars = gltf.scene;
     stars.position.set(-1.5,1050, -2009);
     stars.scale.set(0.5, 0.5, 0.5);
@@ -132,7 +132,7 @@ const sound = new THREE.Audio( listener );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load( '../assets/music.wav', function( buffer ) {
+audioLoader.load( './assets/music.wav', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
 	sound.setVolume( 0.5 );
