@@ -99,7 +99,7 @@ var simbolo;
 const loader = new THREE.GLTFLoader();
 loader.load('./assets/simbolo/scene.gltf', function(gltf){
     simbolo = gltf.scene;
-    simbolo.position.set(5, 1002, -2007);
+    simbolo.position.set(4.5, 1002, -2007);
     simbolo.scale.set(0.2, 0.2, 0.2);
     simbolo.rotation.x += 1.5;
 
@@ -125,7 +125,7 @@ loaders.load('./assets/stars/scene.gltf', function(gltf){
 
 /******************SOUND******************/
 const listener = new THREE.AudioListener();
-camera.add( listener );
+//camera.add( listener );
 
 // create a global audio source
 const sound = new THREE.Audio( listener );
@@ -136,7 +136,6 @@ audioLoader.load( './assets/music.wav', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
 	sound.setVolume( 0.5 );
-	sound.play();
 });
 
 
@@ -491,6 +490,12 @@ function buttons(){
     document.getElementById("female").onclick = function(){
         head.add(coda);
     };
+    document.getElementById("on").onclick = function(){
+        sound.play();
+    };
+    document.getElementById("off").onclick = function(){
+        sound.pause();
+    };
 }
 
 
@@ -549,7 +554,7 @@ function loop() {
             var variableContent = document.getElementById("variable-content");
             variableContent.style.visibility = "visible";
             variableContent.innerHTML = "Game over! Press ENTER to try again.";
-            sound.pause();
+            //sound.pause();
         }
 
         score += 10;
