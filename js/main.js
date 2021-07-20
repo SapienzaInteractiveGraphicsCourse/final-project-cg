@@ -538,7 +538,7 @@ function loop() {
 
         // avvicina gli ostacoli
         objects.forEach(function(object) {
-            object.mesh.position.z += 200;
+            object.mesh.position.z += 100;
         });
 
         if(simbolo) simbolo.rotation.z += 0.1;
