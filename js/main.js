@@ -221,8 +221,8 @@ function Ostacolo(x, y, z) {
     }
 }
 objects = [];
-ostacoloProb = 0.5;
-for (var i = 10; i < 40; i+=4) {
+ostacoloProb = 0.4;
+for (var i = 10; i < 40; i+=5) {
     createOstacolo(i * -3000, ostacoloProb);
 }
 function createOstacolo(position, probability) {
@@ -243,8 +243,8 @@ var paused = true;
 var isJumping = false;
 var isSwitchingLeft = false;
 var isSwitchingRight = false;
-var jumpDuration = 0.8;
-var jumpHeight = 1000;
+var jumpDuration = 0.6;
+var jumpHeight = 950;
 var currentLane = 0; //corsia centrale
 var runningStartTime = new Date() / 1000;
 var pauseStartTime = new Date() / 1000;
@@ -512,25 +512,25 @@ function loop() {
                 var level = difficulty / levelLength;
                 switch (level) {
                     case 1:
-                        ostacoloProb = 0.5;
+                        ostacoloProb = 0.4;
                         break;
                     case 2:
-                        ostacoloProb = 0.5;
+                        ostacoloProb = 0.4;
                         break;
                     case 3:
-                        ostacoloProb = 0.55;
+                        ostacoloProb = 0.45;
                         break;
                     case 4:
-                        ostacoloProb = 0.55;
+                        ostacoloProb = 0.45;
                         break;
                     case 5:
-                        ostacoloProb = 0.6;
+                        ostacoloProb = 0.5;
                         break;
                     case 6:
-                        ostacoloProb = 0.6;
+                        ostacoloProb = 0.5;
                         break;
                     default:
-                        ostacoloProb = 0.65;
+                        ostacoloProb = 0.55;
                 }
             }
             createOstacolo(-120000, ostacoloProb);
